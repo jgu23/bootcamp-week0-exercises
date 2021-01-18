@@ -12,6 +12,10 @@
     -> 20
 */
 
-const myReduce = (arr, f, init) => {}
+const myReduce = (arr, f, init) => {
+  if (arr.length === 0) { return init }
+  const last = arr.pop()
+  return myReduce(arr, f, f(last, init))
+}
 
 module.exports = myReduce
