@@ -10,6 +10,10 @@
     -> [2, 4, 6]
  */
 
-const myMap = (arr, f) => {}
+const myMap = (arr, f) => {
+  const output = []
+  arr.forEach((v) => output.push(f(v)))
+  return output
+}
 
 module.exports = myMap
