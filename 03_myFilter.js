@@ -10,6 +10,10 @@
     -> [1, 3]
 */
 
-const myFilter = (arr, f) => {}
+const myFilter = (arr, f) => {
+  const output = [];
+  arr.forEach((v) => { if (f(v)) { output.push(v) } })
+  return output
+}
 
 module.exports = myFilter
